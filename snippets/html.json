@@ -46,13 +46,13 @@
     "description": "Snippet for social links"
   },
   "basicform": {
-    "prefix": "g-form",
+    "prefix": "form",
     "body": [
       "<form action=\"#\" class=\"form\">",
       "  <label class=\"form__label\">",
       "    <input type=\"text\" name=\"Имя\" class=\"input-reset form__input\" placeholder=\"Имя\">",
       "  </label>",
-      "  <button class=\"btn-reset form__btn\">Отправить</button>",
+      "  <button class=\"btn btn-reset form__btn\">Отправить</button>",
       "</form>"
     ],
     "description": "Snippet for basic form"
@@ -108,7 +108,7 @@
     "description": "Snippet for simple html svg images"
   },
   "tooltip": {
-  "prefix": "g-tooltip",
+    "prefix": "g-tooltip",
     "body": [
       "<div class=\"tooltip\">",
       "  <button class=\"tooltip__btn btn btn-reset\" aria-describedby=\"$1\">Описание</button>",
@@ -124,10 +124,10 @@
     "prefix": "g-tabs",
     "body": [
       "<div class=\"tabs\" data-tabs=\"$1\">",
-      "  <ul class=\"tabs__nav\">",
-      "    <li class=\"tabs__nav-item list-reset\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$2</button></li>",
-      "    <li class=\"tabs__nav-item list-reset\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$3</button></li>",
-      "    <li class=\"tabs__nav-item list-reset\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$4</button></li>",
+      "  <ul class=\"tabs__nav list-reset\">",
+      "    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$2</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$3</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$4</button></li>",
       "  </ul>",
       "  <div class=\"tabs__content\">",
       "    <div class=\"tabs__panel\">$5</div>",
@@ -139,31 +139,31 @@
     "description": "Snippet for basic tabs structure"
   },
   "Spollers": {
-		"prefix": "spollers",
-		"body": [
+    "prefix": "spollers",
+    "body": [
       "<ul data-spollers data-one-spoller class=\"spollers__list list-reset\">",
       "  <li class=\"spollers__item\">",
       "    <button tabindex=\"-1\" type=\"button\" data-spoller class=\"spollers__title\">Аккордеон 1</button>",
       "    <div class=\"spollers__content\">descr</div>",
       "  </li>",
       "</ul>"
-		],
-		"description": "Добавляет базовый HTML код спойлеров"
-	},
+    ],
+    "description": "Добавляет базовый HTML код спойлеров"
+  },
   "Add container": {
-		"prefix": "cnt",
-		"body": "<div class=\"container\">\n\t$1\n</div>",
-		"description": "Добавляет ограничивающий контейнер"
-	},
+    "prefix": "cnt",
+    "body": "<div class=\"container\">\n\t$1\n</div>",
+    "description": "Добавляет ограничивающий контейнер"
+  },
   "simplebar": {
-		"scope": "html",
-		"prefix": "simplebar",
-		"body": "<div class=\"scrollbar\" data-simplebar>\n\t$2\n</div>",
-		"description":  "Добавляет базовый HTML код simplebar",
-	},
+    "scope": "html",
+    "prefix": "simplebar",
+    "body": "<div class=\"scrollbar\" data-simplebar>\n\t$2\n</div>",
+    "description": "Добавляет базовый HTML код simplebar",
+  },
   "gallery": {
-		"scope": "html",
-		"prefix": "gallery",
+    "scope": "html",
+    "prefix": "gallery",
     "body": [
       "<div id=\"$1\">",
       "  <a href=\"img/\">",
@@ -174,49 +174,51 @@
       "  </a>",
       "</div>"
     ],
-		"description": "Добавляет базовый HTML код галереи"
-	},
+    "description": "Добавляет базовый HTML код галереи"
+  },
   "Rating": {
-		"scope": "html",
-		"prefix": "rating",
-		"body": [
-			"<div class=\"rating rating_set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"1\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"2\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"3\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"4\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
-		],
-		"description": "Добавляет базовый HTML код рейтинга"
-	},
+    "scope": "html",
+    "prefix": "rating",
+    "body": [
+      "<div class=\"rating rating_set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"1\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"2\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"3\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"4\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
+    ],
+    "description": "Добавляет базовый HTML код рейтинга"
+  },
 
   "Add input tag": {
-		"scope": "html",
-		"prefix": "inp",
-		"body": "<input type=\"text\" class=\"input-reset\" placeholder=\"$1\">",
-		"description": "Добавляет input со настройками"
-	},
-  "Textarea": {
-		"scope": "html,kit",
-		"prefix": "textarea",
-		"body": "<textarea class=\"input\" placeholder=\"$1\"></textarea>",
-		"description": "snipper for textarea"
-	},
-  "checkbox": {
     "scope": "html",
-    "prefix": "g-checkbox",
-    "body": [
-      "<label class=\"custom-checkbox\">",
-      "  <input type=\"checkbox\" class=\"custom-checkbox__field\">",
-      "  <span class=\"custom-checkbox__content\">$1</span>",
-      "</label>"
-    ],
-    "description": "Snippet for custom checkbox"
+    "prefix": "input",
+    "body": "<input type=\"text\" name=\"Имя\" class=\"input-reset\" placeholder=\"Имя\">",
+    "description": "Добавляет input"
   },
+  "Textarea": {
+    "scope": "html",
+    "prefix": "textarea",
+    "body": "<textarea class=\"input-reset\" placeholder=\"$1\"></textarea>",
+    "description": "snipper for textarea"
+  },
+  "CheckBox": {
+    "prefix": "checkbox",
+    "body": [
+      "<div class=\"checkbox\">",
+      "   <input id=\"c_1\" class=\"checkbox__input\" type=\"checkbox\" value=\"1\">",
+      "     <label for=\"c_1\" class=\"checkbox__label\">",
+      "     <span class=\"checkbox__text\">${1:Текст}</span>",
+      "  </label>",
+      "</div>",
+    ],
+    "description": "Snippet for custom checkbox",
+  },
+
   "Button": {
-		"prefix": "btn",
-		"body": "<button type=\"submit\" class=\"btn btn-reset\">${1:Отправить}</button>",
-		"description": "snipper for btn"
-	},
+    "prefix": "btn",
+    "body": "<button type=\"submit\" class=\"btn btn-reset\">${1:Отправить}</button>",
+    "description": "snipper for btn"
+  },
   "qa": {
-		"scope": "html,kit",
-		"prefix": "qa",
-		"body": [
+    "scope": "html,kit",
+    "prefix": "qa",
+    "body": [
       "<div class=\"quantity\">",
       "   <div class=\"quantity__button quantity__button_plus\"></div>",
       "   <div class=\"quantity__input\">",
@@ -226,29 +228,27 @@
       "</div>",
     ],
     "description": "qa"
-	},
+  },
   "radio": {
-		"prefix": "opt",
-		"body": "<div class=\"options\">\n\t<div class=\"options__item\">\n\t\t<input hidden id=\"o_1\" class=\"options__input\" checked type=\"radio\" value=\"1\" name=\"option\">\n\t\t<label for=\"o_1\" class=\"options__label\"><span class=\"options__text\">${1:Текст}</span></label>\n\t</div>\n\t<div class=\"options__item\">\n\t\t<input hidden id=\"o_2\" class=\"options__input\" type=\"radio\" value=\"2\" name=\"option\">\n\t\t<label for=\"o_2\" class=\"options__label\"><span class=\"options__text\">${2:Текст}</span></label>\n\t</div>\n</div>",
-		"description": "radio"
-	},
+    "prefix": "radio",
+    "body": "<div class=\"radio\">\n\t<div class=\"radio__item\">\n\t\t<input hidden id=\"o_1\" class=\"radio__input\" checked type=\"radio\" value=\"1\" name=\"option\">\n\t\t<label for=\"o_1\" class=\"radio__label\"><span class=\"radio__text\">${1:Текст}</span></label>\n\t</div>\n\t<div class=\"radio__item\">\n\t\t<input hidden id=\"o_2\" class=\"radio__input\" type=\"radio\" value=\"2\" name=\"option\">\n\t\t<label for=\"o_2\" class=\"radio__label\"><span class=\"radio__text\">${2:Текст}</span></label>\n\t</div>\n</div>",
+    "description": "radio",
+  },
   "Add image IBG": {
-		"scope": "html",
-		"prefix": "ibg",
-		"body": [
-			"<div class=\"${1:имя блока}__image-ibg\"><img src=\"@img$2\" alt=\"\"></div>"
-		],
-		"description": "Добавляет объект с картинкой и классом IBG"
-	},
-	"Add Link with image IBG": {
-		"scope": "html",
-		"prefix": "ibga",
-		"body": [
-			"<a href=\"\" class=\"${1:имя блока}__image-ibg\"><img src=\"@img$2\" alt=\"\"></a>"
-		],
-		"description": "Добавляет ссылку с картинкой и классом IBG"
-	},
+    "scope": "html",
+    "prefix": "ibg",
+    "body": [
+      "<div class=\"${1:имя блока}__image-ibg\"><img src=\"@img$2\" alt=\"\"></div>"
+    ],
+    "description": "Добавляет объект с картинкой и классом IBG"
+  },
+  "Add Link with image IBG": {
+    "scope": "html",
+    "prefix": "ibga",
+    "body": [
+      "<a href=\"\" class=\"${1:имя блока}__image-ibg\"><img src=\"@img$2\" alt=\"\"></a>"
+    ],
+    "description": "Добавляет ссылку с картинкой и классом IBG"
+  },
+
 }
-
-
-

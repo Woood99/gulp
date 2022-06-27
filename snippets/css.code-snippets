@@ -35,7 +35,8 @@
 		"scope": "css, scss",
 		"prefix": "ts-2",
 		"body": [
-			"transition: all \\$transitionSpeed \\$transitionFunction, all \\$transitionSpeed \\$transitionFunction;"
+			"transition: all \\$transitionSpeed \\$transitionFunction,", 
+			"all \\$transitionSpeed \\$transitionFunction;"
 		],
 		"description": "transition 2"
 	},
@@ -43,11 +44,19 @@
 		"scope": "css, scss",
 		"prefix": "ts-3",
 		"body": [
-			"transition: all \\$transitionSpeed \\$transitionFunction, all \\$transitionSpeed \\$transitionFunction, all \\$transitionSpeed \\$transitionFunction;"
+			"transition: all \\$transitionSpeed \\$transitionFunction,", 
+			"all \\$transitionSpeed \\$transitionFunction,", 
+			"all \\$transitionSpeed \\$transitionFunction;"
 		],
 		"description": "transition 3"
 	},
-
+	"hhv": {
+		"prefix": "hhv",
+		"body": [
+			"@media (any-hover: hover){\n\t&:hover{\n\t\t$0\n\t}\n}"
+		],
+		"description": "hhv"
+	},
 
 	"md1": {
 		"prefix": "md1",
@@ -132,5 +141,13 @@
 		"prefix": "lh",
 		"body": "line-height: math.div($1 , $2);",
 		"description": "Добавляет относительный line-height"
+	},
+	"Adaptiv Value": {
+		"scope": "scss",
+		"prefix": "av",
+		"body": [
+			"@include adaptiveValue(\"${1:font-size}\", $2, $3);"
+		],
+		"description": "Адаптивное свойство: CSS-свойство, начальное значение, конечное значение, ширина начальная, ширина конечная"
 	},
 }

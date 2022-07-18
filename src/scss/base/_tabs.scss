@@ -1,18 +1,22 @@
 .tabs {
-    .tabs__nav-btn--active {
-        background-color: #ff0001;
-        color: #fff;
+    &__navigation {
+        display: flex;
     }
 
-    .tabs__panel {
-        display: none;
+    &__title {
+        border: 1px solid #eee;
+        padding: 10px 15px;
+        border-radius: 5px;
+
+        &._tab-active {
+            border: 1px solid #000;
+        }
     }
 
-    .tabs__panel--active {
-        display: block;
+    &__content {
+        border: 1px solid #eee;
+        padding: 10px 15px;
     }
 
-    .tabs__nav {
-        display: flex
-    }
+    &__body {}
 }

@@ -22,10 +22,10 @@
         padding: 7px 15px;
         width: max-content;
         max-width: 250px;
-        box-shadow: 0 0 29px rgba($mainColor, 0.15);
+        box-shadow: 0 0 29px rgba(#000, 0.15);
         line-height: 200%;
-        color: $whiteColor;
-        background-color: $mainColor;
+        color: #fff;
+        background-color: #000;
         opacity: 0;
         visibility: hidden;
         transform: translateY(10px);

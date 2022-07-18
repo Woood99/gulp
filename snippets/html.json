@@ -120,41 +120,46 @@
     ],
     "description": "Snippet for tooltip"
   },
-  "tabs html sctructure": {
-    "prefix": "g-tabs",
-    "body": [
-      "<div class=\"tabs\" data-tabs=\"$1\">",
-      "  <ul class=\"tabs__nav list-reset\">",
-      "    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$2</button></li>",
-      "    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$3</button></li>",
-      "    <li class=\"tabs__nav-item\"><button class=\"tabs__nav-btn btn-reset\" type=\"button\">$4</button></li>",
-      "  </ul>",
-      "  <div class=\"tabs__content\">",
-      "    <div class=\"tabs__panel\">$5</div>",
-      "    <div class=\"tabs__panel\">$6</div>",
-      "    <div class=\"tabs__panel\">$7</div>",
-      "  </div>",
+	"Tabs": {
+		"scope": "html",
+		"prefix": "tabs",
+		"body": [
+			"<div data-tabs class=\"tabs\">",
+      "   <nav data-tabs-titles class=\"tabs__navigation\">",
+      "       <button type=\"submit\" class=\"btn btn-reset tabs__title _tab-active\">Таб №1</button>",
+      "       <button type=\"submit\" class=\"btn btn-reset tabs__title\">Таб №2</button>",
+      "       <button type=\"submit\" class=\"btn btn-reset tabs__title\">Таб №3</button>",
+      "   </nav>",
+      "   <div data-tabs-body class=\"tabs__content\">",
+      "       <div class=\"tabs__body\">",
+      "           1 content",
+      "       </div>",
+      "       <div class=\"tabs__body\">",
+      "           2 content",
+      "       </div>",
+      "       <div class=\"tabs__body\">",
+      "           3 content",
+      "       </div>",
+      "   </div>",
       "</div>"
-    ],
-    "description": "Snippet for basic tabs structure"
-  },
+		],
+		"description": "Добавляет базовый HTML код табов"
+	},
   "Spollers": {
-    "prefix": "spollers",
-    "body": [
-      "<ul data-spollers data-one-spoller class=\"spollers__list list-reset\">",
-      "  <li class=\"spollers__item\">",
-      "    <button tabindex=\"-1\" type=\"button\" data-spoller class=\"spollers__title\">Аккордеон 1</button>",
-      "    <div class=\"spollers__content\">descr</div>",
-      "  </li>",
-      "</ul>"
-    ],
-    "description": "Добавляет базовый HTML код спойлеров"
-  },
-  "Add container": {
-    "prefix": "cnt",
-    "body": "<div class=\"container\">\n\t$1\n</div>",
-    "description": "Добавляет ограничивающий контейнер"
-  },
+		"scope": "html",
+		"prefix": "spollers",
+		"body": [
+			"<div data-spollers class=\"spollers\">",
+      "   <div class=\"spollers__item\">",
+      "       <button type=\"button\" data-spoller class=\"btn btn-reset spollers__title\">Заголовок спойлера</button>",
+      "       <div class=\"spollers__body\">",
+      "           Контент спойлера",
+      "       </div>",
+      "   </div>",
+      "</div>"
+		],
+		"description": "Добавляет базовый HTML код спойлеров"
+	},
   "simplebar": {
     "scope": "html",
     "prefix": "simplebar",

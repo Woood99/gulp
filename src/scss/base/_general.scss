@@ -12,10 +12,10 @@
 .dis-scroll {
     overflow: hidden;
     height: 100vh;
-}
-
-.is-hidden {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 
 .list-reset {

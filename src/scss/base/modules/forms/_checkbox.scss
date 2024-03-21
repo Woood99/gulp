@@ -1,0 +1,38 @@
+.checkbox {
+    position: relative;
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:focus+.checkbox__label:before {
+            background-color: #000;
+        }
+
+        &:checked+.checkbox__label:before {
+            background-color: #000;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            content: "";
+            align-self: flex-start;
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #a7a9ac;
+        }
+    }
+
+    &__text {
+        margin-left: 10px;
+    }
+}

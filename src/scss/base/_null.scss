@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-weight: 400;
+    font-size: inherit;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.page {
+    height: 100%;
+    font-family: $fontFamily, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+    margin: 0;
+    min-width: $minWidth + px;
+    min-height: 100%;
+    font-size: $fontSize + px;
+    line-height: 100%;
+    background-color: $bodyColor;
+    color: $mainColor;
+}
+
+.site-container {
+    overflow: hidden; // если используется на сайте position: sticky - убрать
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 ($containerOffset + px);
+    max-width: $containerWidth + px;
+}

@@ -1,0 +1,42 @@
+$fontFamily: "fontFamily";
+$fontSize: 14;
+$minWidth: 320;
+$maxWidth: 1920;
+$contentWidth: 1170;
+$containerOffset: 15;
+$containerWidth: calc($contentWidth + ($containerOffset * 2));
+
+// ============================================================
+
+$bodyColor: #fff;
+$mainColor: #3D3D3D;
+
+// ============================================================
+
+$desktop: $containerWidth+px;
+$desktop-min: ($containerWidth + 1)+px;
+
+$tablet-max: 1024px;
+$tablet-min: 1025px;
+
+$smallTablet-max: 768px;
+$smallTablet-min: 769px;
+
+$mobile-max: 576px;
+$mobile-min: 577px;
+
+$smallMobile-max: 480px;
+$smallMobile-min: 481px;
+
+// ============================================================
+
+:root {
+    --black: #000;
+    --white: #fff;
+}
+
+// ============================================================
+
+$transitionSpeed: 0.3s;
+$transitionSpeedFast: 0.1s;
+$transitionFunction: ease-in-out;

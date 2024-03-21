@@ -1,0 +1,67 @@
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+.dis-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.js-focus-visible:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.ibg {
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
+    // padding-bottom: percent(height, width);
+}
+
+.ibg-contain {
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+    }
+
+    // padding-bottom: percent(height, width);
+}
+
+.no-select {
+    user-select: none;
+}

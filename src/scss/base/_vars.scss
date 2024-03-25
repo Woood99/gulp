@@ -1,20 +1,5 @@
-$fontFamily: "fontFamily";
-$fontSize: 14;
-$minWidth: 320;
-$maxWidth: 1920;
-$contentWidth: 1170;
-$containerOffset: 15;
-$containerWidth: calc($contentWidth + ($containerOffset * 2));
-
-// ============================================================
-
-$bodyColor: #fff;
-$mainColor: #3D3D3D;
-
-// ============================================================
-
-$desktop: $containerWidth+px;
-$desktop-min: ($containerWidth + 1)+px;
+$desktop: 1300px;
+$desktop-min: 1301px;
 
 $tablet-max: 1024px;
 $tablet-min: 1025px;
@@ -31,8 +16,26 @@ $smallMobile-min: 481px;
 // ============================================================
 
 :root {
+    // settings
+    --min-width: 320px;
+
+    --content-width: 1200px;
+    --container-padding: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-padding) * 2));
+
+    // font
+    --font-family: "fontFamily";
+    --default-fz: 14px;
+
+    // color main
+    --page-bg: #fff;
+	--text-color: #000;
+
+    // color other
     --black: #000;
     --white: #fff;
+    --red: #e01717;
+    --blue: #1a48ac;
 }
 
 // ============================================================
@@ -40,3 +43,11 @@ $smallMobile-min: 481px;
 $transitionSpeed: 0.3s;
 $transitionSpeedFast: 0.1s;
 $transitionFunction: ease-in-out;
+
+
+// ============================================================
+
+.dark-theme {
+    --page-bg: #252526;
+    --text-color: #fff;
+}

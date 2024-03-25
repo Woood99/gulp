@@ -35,26 +35,27 @@ a {
 
 .page {
     height: 100%;
-    font-family: $fontFamily, sans-serif;
-    -webkit-text-size-adjust: 100%;
+    font-family: var(--font-family), sans-serif;
 }
 
 .page__body {
-    margin: 0;
-    min-width: $minWidth + px;
+    min-width: var(--min-width);
     min-height: 100%;
-    font-size: $fontSize + px;
-    line-height: 100%;
-    background-color: $bodyColor;
-    color: $mainColor;
+    font-size: var(--default-fz);
+    background-color: var(--page-bg);
+    color: var(--text-color);
 }
 
 .site-container {
-    overflow: hidden; // если используется на сайте position: sticky - убрать
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
+.main{
+    flex-grow: 1;
+}
 .container {
     margin: 0 auto;
-    padding: 0 ($containerOffset + px);
-    max-width: $containerWidth + px;
+    padding: 0 var(--container-padding);
+    max-width: var(--container-width);
 }

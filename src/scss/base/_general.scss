@@ -24,7 +24,7 @@
     padding: 0;
 }
 
-.js-focus-visible:focus:not(.focus-visible) {
+.js-focus-visible :focus:not(.focus-visible) {
     outline: none;
 }
 

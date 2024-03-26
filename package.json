@@ -40,5 +40,8 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "dependencies": {
+    "focus-visible": "^5.2.0"
   }
 }

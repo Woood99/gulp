@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    @include('./partials/head.html', {
+        "title": "Страницы",
+        css: 'example',
+        js: 'example'
+    })
+    <style>
+        .container{
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+        h4:not([class]) {
+            font-size: 30px;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .block {
+            padding: 20px 0;
+        }
+
+        .block:first-child {
+            padding-top: 0;
+        }
+
+        .block:last-child {
+            padding-bottom: 0;
+        }
+
+        .block:not(:first-child) {
+            border-top: 1px solid gray;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <main class="main">
+            <div class="container">
+                <div class="block">
+                    <div>
+                        <h4>Buttons</h4>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-reset btn-primary">
+                            <span class="btn-primary__text">Primary</span>
+                        </button>
+                        <button type="button" class="btn btn-reset btn-primary" disabled>
+                            <span class="btn-primary__text">Primary disabled</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="block">
+                    <div>
+                        <h4>Checkbox</h4>
+                    </div>
+                    <div class="row">
+                        <label class="checkbox">
+                            <input type="checkbox" name="checkbox" class="input-reset checkbox__field">
+                            <div class="checkbox__checkmark">
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <span class="checkbox__content">
+                               Checkbox
+                            </span>
+                        </label>
+                        <label class="checkbox checkbox--disabled">
+                            <input type="checkbox" name="checkbox" class="input-reset checkbox__field" disabled>
+                            <div class="checkbox__checkmark">
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <span class="checkbox__content">
+                               Checkbox disabled
+                            </span>
+                        </label>
+                        <label class="checkbox checkbox--disabled">
+                            <input type="checkbox" name="checkbox" class="input-reset checkbox__field" disabled checked>
+                            <div class="checkbox__checkmark">
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#check"></use>
+                                </svg>
+                            </div>
+                            <span class="checkbox__content">
+                               Checkbox checked disabled
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="block">
+                    <div>
+                        <h4>Inputs</h4>
+                    </div>
+                    <div class="row">
+                        <label class="input-primary">
+                            <input type="text" name="Имя" class="input-reset input-primary__input" placeholder="input">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="textarea-primary">
+                            <textarea class="input-reset textarea-primary__input" placeholder="placeholder"></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+
+</html>

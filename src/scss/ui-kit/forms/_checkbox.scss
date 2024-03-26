@@ -1,0 +1,97 @@
+.checkbox {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    --size: 15px;
+    --gap: 10px;
+    --size-icon: 10px;
+
+    display: flex;
+    align-items: start;
+    gap: var(--gap);
+
+    --border-color: #b3bcc5;
+
+    &__field {
+        appearance: none;
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+     @media (min-width:$desktop-min){
+        &:hover {
+            +.checkbox__checkmark {
+                svg {
+                    stroke: var(--border-color);
+                }
+            }
+        } 
+     }
+
+        &:checked {
+            +.checkbox__checkmark {
+                background-color: var(--blue);
+                border-color: var(--blue);
+
+                svg {
+                    stroke: var(--white);
+                }
+            }
+        }
+
+        &:disabled {
+            +.checkbox__checkmark {
+                opacity: 0.4;
+                pointer-events: none;
+            }
+
+            &:checked {
+                +.checkbox__checkmark {
+                    opacity: 0.75;
+                }
+            }
+        }
+
+        @media (min-width:$desktop-min) {
+            &.focus-visible {
+                +.checkbox__checkmark {
+                    background-color: #2776dd;
+                    border-color: var(--border-color);
+                }
+            }
+        }
+    }
+
+    &__checkmark {
+        flex: 0 0 var(--size);
+        width: var(--size);
+        height: var(--size);
+
+        border: 2px solid var(--border-color);
+        border-radius: 4px;
+        background-color: var(--white);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: border $transitionSpeed $transitionFunction,
+            background-color $transitionSpeed $transitionFunction;
+
+        svg {
+            width: var(--size-icon);
+            height: var(--size-icon);
+            fill: none;
+            stroke: transparent;
+            transition: stroke $transitionSpeed $transitionFunction;
+        }
+    }
+
+    &__content {}
+
+    &--disabled {
+        cursor: default;
+        user-select: auto;
+    }
+}

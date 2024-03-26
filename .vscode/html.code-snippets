@@ -1,0 +1,258 @@
+{
+  "svguse": {
+    "scope": "html",
+    "prefix": "use",
+    "body": [
+      "<svg class=\"\">",
+      "  <use xlink:href=\"img/sprite.svg#$2\"></use>",
+      "</svg>"
+    ],
+    "description": "Snippet for use svg sprites"
+  },
+  "burger": {
+    "scope": "html",
+    "prefix": "burger",
+    "body": [
+      "<button class=\"burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\"  data-burger>",
+      "  <span class=\"burger__line\"></span>",
+      "</button>"
+    ],
+    "description": "Snippet for burger btn"
+  },
+  "navigation": {
+    "scope": "html",
+    "prefix": "nav",
+    "body": [
+      "<nav class=\"nav\" title=\"$1\">",
+      "  <ul class=\"nav__list\">",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "Snippet for navigation"
+  },
+  "social": {
+    "scope": "html",
+    "prefix": "social",
+    "body": [
+      "<ul class=\"social\" title=\"$1\">",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--fb\" aria-label=\"Наша страничка в Фейсбуке\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--vk\" aria-label=\"Наша страничка во Вконтакте\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--tw\" aria-label=\"Наша страничка в Твиттере\"></a></li>",
+      "</ul>"
+    ],
+    "description": "Snippet for social links"
+  },
+  "basicform": {
+    "prefix": "form",
+    "body": [
+      "<form action=\"#\" class=\"\">",
+      "  <label class=\"\">",
+      "    <input type=\"text\" name=\"Имя\" class=\"input-reset\" placeholder=\"Имя\">",
+      "  </label>",
+      "  <button type=\"submit\" class=\"btn btn-reset\">Отправить</button>",
+      "</form>"
+    ],
+    "description": "Snippet for basic form"
+  },
+  "basicswiper": {
+    "prefix": "swiper",
+    "body": [
+      "<div class=\"swiper $1\">",
+      "  <div class=\"swiper-wrapper\">",
+      "     <div class=\"swiper-slide\">",
+      "     </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic swiper structure"
+  },
+  "Popup btn": {
+    "prefix": "popup-btn",
+    "body": [
+      "<button class=\"$1\" data-popup-path=\"$2\">$3</button>"
+    ],
+    "description": "Snippet for popup btn"
+  },
+  "Popup structure": {
+    "prefix": "popup",
+    "body": [
+      "<div class=\"popup\">",
+      "  <div class=\"popup__container\" role=\"dialog\" aria-modal=\"true\" data-popup-target=\"$1\">",
+      "    <button class=\"btn-reset js-popup-close popup__close\" aria-label=\"Закрыть модальное окно\"></button>",
+      "    <div class=\"popup__content\">$2</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for popup basic structure"
+  },
+  "picture": {
+    "prefix": "picture",
+    "body": [
+      "<picture>",
+      "  <source srcset=\"$1.webp\" type=\"image/webp\">",
+      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
+      "</picture>"
+    ],
+    "description": "Snippet for basic logo structure"
+  },
+  "svgimg": {
+    "scope": "html",
+    "prefix": "svgimg",
+    "body": [
+      "<img loading=\"lazy\" src=\"$1.svg\" class=\"\" alt=\"\">"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "tooltip": {
+    "prefix": "tooltip",
+    "body": [
+      "<div class=\"tooltip\">",
+      "  <button class=\"tooltip__btn btn btn-reset\" aria-describedby=\"$1\">Описание</button>",
+      "  <span class=\"tooltip__content\" role=\"tooltip\" id=\"$1\">",
+      "    <span class=\"visually-hidden\">Тултип: </span>",
+      "    descr",
+      "  </span>",
+      "</div>"
+    ],
+    "description": "Snippet for tooltip"
+  },
+	"Tabs": {
+		"scope": "html",
+		"prefix": "tabs",
+		"body": [
+			"<div data-tabs class=\"tabs\">",
+      "   <nav data-tabs-titles class=\"tabs__navigation\">",
+      "       <button type=\"button\" class=\"btn btn-reset tabs__title _tab-active\">Таб №1</button>",
+      "       <button type=\"button\" class=\"btn btn-reset tabs__title\">Таб №2</button>",
+      "       <button type=\"button\" class=\"btn btn-reset tabs__title\">Таб №3</button>",
+      "   </nav>",
+      "   <div data-tabs-body class=\"tabs__content\">",
+      "       <div class=\"tabs__body\">",
+      "           1 content",
+      "       </div>",
+      "       <div class=\"tabs__body\">",
+      "           2 content",
+      "       </div>",
+      "       <div class=\"tabs__body\">",
+      "           3 content",
+      "       </div>",
+      "   </div>",
+      "</div>"
+		],
+		"description": "Добавляет базовый HTML код табов"
+	},
+  "Spollers": {
+		"scope": "html",
+		"prefix": "spollers",
+		"body": [
+			"<div data-spollers class=\"spollers\">",
+      "   <div class=\"spollers__item\">",
+      "       <button type=\"button\" data-spoller class=\"btn btn-reset spollers__title\">Заголовок спойлера</button>",
+      "       <div class=\"spollers__body\">",
+      "           Контент спойлера",
+      "       </div>",
+      "   </div>",
+      "</div>"
+		],
+		"description": "Добавляет базовый HTML код спойлеров"
+	},
+  "gallery": {
+    "scope": "html",
+    "prefix": "gallery",
+    "body": [
+      "<div id=\"$1\">",
+      "  <a href=\"img/\">",
+      "     <img src=\"img/\" alt=\"img\">",
+      "  </a>",
+      "  <a href=\"img/\">",
+      "     <img src=\"img/\" alt=\"img\">",
+      "  </a>",
+      "</div>"
+    ],
+    "description": "Добавляет базовый HTML код галереи"
+  },
+  "Rating": {
+    "scope": "html",
+    "prefix": "rating",
+    "body": [
+      "<div class=\"rating rating_set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"1\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"2\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"3\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"4\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
+    ],
+    "description": "Добавляет базовый HTML код рейтинга"
+  },
+
+  "Add input tag": {
+    "scope": "html",
+    "prefix": "input",
+    "body": "<input type=\"te1xt\" name=\"Имя\" class=\"input-reset\" placeholder=\"Имя\">",
+    "description": "Добавляет input"
+  },
+  "Textarea": {
+    "scope": "html",
+    "prefix": "textarea",
+    "body": "<textarea class=\"input-reset\" placeholder=\"$1\"></textarea>",
+    "description": "snipper for textarea"
+  },
+  "CheckBox": {
+    "prefix": "checkbox",
+    "body": [
+      "<div class=\"checkbox\">",
+      "   <input id=\"c_1\" class=\"checkbox__input\" type=\"checkbox\" value=\"1\">",
+      "     <label for=\"c_1\" class=\"checkbox__label\">",
+      "     <span class=\"checkbox__text\">${1:Текст}</span>",
+      "  </label>",
+      "</div>",
+    ],
+    "description": "Snippet for custom checkbox",
+  },
+
+  "Button": {
+    "prefix": "btn",
+    "body": [
+			"<button type=\"button\" class=\"btn btn-reset\">",
+      "    <span class=\"\">",
+      "        Button",
+      "    </span>",
+      "</button>"
+		],
+    "description": "snipper for btn"
+  },
+  "qa": {
+    "scope": "html,kit",
+    "prefix": "qa",
+    "body": [
+      "<div class=\"quantity\">",
+      "   <div class=\"quantity__button quantity__button_plus\"></div>",
+      "   <div class=\"quantity__input\">",
+      "       <input type=\"text\" value=\"1\">",
+      "   </div>",
+      "   <div class=\"quantity__button quantity__button_minus\"></div>",
+      "</div>",
+    ],
+    "description": "qa"
+  },
+  "radio": {
+    "prefix": "radio",
+    "body": "<div class=\"radio\">\n\t<div class=\"radio__item\">\n\t\t<input hidden id=\"o_1\" class=\"radio__input\" checked type=\"radio\" value=\"1\" name=\"option\">\n\t\t<label for=\"o_1\" class=\"radio__label\"><span class=\"radio__text\">${1:Текст}</span></label>\n\t</div>\n\t<div class=\"radio__item\">\n\t\t<input hidden id=\"o_2\" class=\"radio__input\" type=\"radio\" value=\"2\" name=\"option\">\n\t\t<label for=\"o_2\" class=\"radio__label\"><span class=\"radio__text\">${2:Текст}</span></label>\n\t</div>\n</div>",
+    "description": "radio",
+  },
+  "Add image IBG": {
+    "scope": "html",
+    "prefix": "ibg",
+    "body": [
+      "<div class=\"${1:имя блока}__image-ibg\"><img src=\"@img$2\" alt=\"\"></div>"
+    ],
+    "description": "Добавляет объект с картинкой и классом IBG"
+  },
+  "Add Link with image IBG": {
+    "scope": "html",
+    "prefix": "ibga",
+    "body": [
+      "<a href=\"\" class=\"${1:имя блока}__image-ibg\"><img src=\"@img$2\" alt=\"\"></a>"
+    ],
+    "description": "Добавляет ссылку с картинкой и классом IBG"
+  },
+
+}

@@ -1,0 +1,71 @@
+.btn-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    transition: color $transitionSpeed $transitionFunction,
+        background-color $transitionSpeed $transitionFunction,
+        border $transitionSpeed $transitionFunction,
+        box-shadow $transitionSpeed $transitionFunction;
+}
+
+.btn-primary {
+    --bg: #2b67e9;
+    --color: #fff;
+    --bg-focus: black;
+    --bg-hover: black;
+    --bg-active: black;
+    --shadow: 0px 15px 20px rgba(35, 125, 233, 0.28);
+    --bg-disabled: rgba(0, 0, 0, 0.15);
+
+    background-color: var(--bg);
+    padding: 16px 24px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    &__text {
+        text-transform: uppercase;
+        color: var(--color);
+    }
+
+    @media (min-width:$desktop-min) {
+        &.focus-visible {
+            background-color: var(--bg-focus);
+        }
+
+        &:hover {
+            background-color: var(--bg-hover);
+        }
+
+        &:active {
+            box-shadow: var(--shadow);
+            background-color: var(--bg-active);
+        }
+    }
+
+    &:disabled {
+        background-color: var(--bg-disabled);
+        pointer-events: none;
+        cursor: default;
+    }
+
+    &.theme_warning {
+        --bg: #e03023;
+        --color: #f1dddd;
+        --bg-focus: #7c2c2c;
+        --bg-hover: #7c2c2c;
+        --bg-active: #7c2c2c;
+        --shadow: 0px 15px 20px rgba(233, 36, 29, 0.2);
+        --bg-disabled: rgba(235, 117, 117, 0.15);
+    }
+
+}

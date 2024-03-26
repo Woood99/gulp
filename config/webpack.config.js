@@ -2,6 +2,7 @@ function config(mode) {
 	return {
 		mode: mode,
 		entry: {
+			global: './src/js/global.js',
 			home: './src/js/pages/home.js'
 		},
 		output: {

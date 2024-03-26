@@ -1,25 +1,15 @@
 @use "sass:math";
 
-// global components
-@import "../base/vars";
-@import "../base/mixins";
-@import "../base/fonts";
-@import "../base/null";
-@import "../base/general";
-@import "../base/common";
-
-// =============================================================================================================
-
 
 // ui components
-@import "../ui-kit/component";
+// @import "../ui-kit/component";
 
 
 // =============================================================================================================
 
 
 // small components
-// @import "./components/nav";
+// @import "../smal-components/component";
 
 
 // =============================================================================================================

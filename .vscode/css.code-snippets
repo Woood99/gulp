@@ -1,0 +1,160 @@
+{
+    "ts-color": {
+        "scope": "css, scss",
+        "prefix": "ts-color",
+        "body": [
+            "transition: color \\$transitionSpeed \\$transitionFunction;"
+        ],
+        "description": "transition color"
+    },
+    "ts-bg": {
+        "scope": "css, scss",
+        "prefix": "ts-bg",
+        "body": [
+            "transition: background-color \\$transitionSpeed \\$transitionFunction;"
+        ],
+        "description": "transition bg"
+    },
+    "ts-op": {
+        "scope": "css, scss",
+        "prefix": "ts-op",
+        "body": [
+            "transition: opacity \\$transitionSpeed \\$transitionFunction;"
+        ],
+        "description": "transition opacity"
+    },
+    "ts-1": {
+        "scope": "css, scss",
+        "prefix": "ts-1",
+        "body": [
+            "transition: all \\$transitionSpeed \\$transitionFunction;"
+        ],
+        "description": "transition 1"
+    },
+    "ts-2": {
+        "scope": "css, scss",
+        "prefix": "ts-2",
+        "body": [
+            "transition: all \\$transitionSpeed \\$transitionFunction,",
+            "all \\$transitionSpeed \\$transitionFunction;"
+        ],
+        "description": "transition 2"
+    },
+    "ts-3": {
+        "scope": "css, scss",
+        "prefix": "ts-3",
+        "body": [
+            "transition: all \\$transitionSpeed \\$transitionFunction,",
+            "all \\$transitionSpeed \\$transitionFunction,",
+            "all \\$transitionSpeed \\$transitionFunction;"
+        ],
+        "description": "transition 3"
+    },
+    "hhv": {
+        "prefix": "hhv",
+        "body": [
+            "@media (any-hover: hover){\n\t&:hover{\n\t\t$0\n\t}\n}"
+        ],
+        "description": "hhv"
+    },
+
+    "md1": {
+        "prefix": "md1",
+        "body": [
+            "@media (max-width:\\$desktop){\n\t $0 \n}"
+        ],
+        "description": "md1"
+    },
+    "mmd1": {
+        "prefix": "mmd1",
+        "body": [
+            "@media (min-width:\\$desktop-min){\n\t $0 \n}"
+        ],
+        "description": "mmd1"
+    },
+    "md2": {
+        "prefix": "md2",
+        "body": [
+            "@media (max-width:\\$tablet-max){\n\t$0\n}"
+        ],
+        "description": "md2"
+    },
+    "mmd2": {
+        "prefix": "mmd2",
+        "body": [
+            "@media (min-width:\\$tablet-min){\n\t $0 \n}"
+        ],
+        "description": "mmd2"
+    },
+    "md3": {
+        "prefix": "md3",
+        "body": [
+            "@media (max-width:\\$smallTablet-max){\n\t $0 \n}"
+        ],
+        "description": "md3"
+    },
+    "mmd3": {
+        "prefix": "mmd3",
+        "body": [
+            "@media (min-width:\\$smallTablet-min){\n\t $0 \n}"
+        ],
+        "description": "mmd3"
+    },
+    "md4": {
+        "prefix": "md4",
+        "body": [
+            "@media (max-width:\\$mobile-max){\n\t $0 \n}"
+        ],
+        "description": "md4"
+    },
+    "mmd4": {
+        "prefix": "mmd4",
+        "body": [
+            "@media (min-width:\\$mobile-min){\n\t $0 \n}"
+        ],
+        "description": "md1"
+    },
+    "md5": {
+        "prefix": "md5",
+        "body": [
+            "@media (max-width:\\$smallMobile-max){\n\t $0 \n}"
+        ],
+        "description": "md5"
+    },
+    "mmd5": {
+        "prefix": "mmd5",
+        "body": [
+            "@media (min-width:\\$smallMobile-min){\n\t $0 \n}"
+        ],
+        "description": "md1"
+    },
+    "Percent": {
+        "scope": "scss",
+        "prefix": "prc",
+        "body": [
+            "percent($1,$2)"
+        ],
+        "description": "Вызов миксина перевода в %"
+    },
+    "Line height": {
+        "scope": "scss",
+        "prefix": "lh",
+        "body": "line-height: math.div($1 , $2);",
+        "description": "Добавляет относительный line-height"
+    },
+    "Adaptiv Value": {
+        "scope": "scss",
+        "prefix": "av",
+        "body": [
+            "@include adaptiveValue(\"${1:font-size}\", $2, $3);"
+        ],
+        "description": "Адаптивное свойство: CSS-свойство, начальное значение, конечное значение, ширина начальная, ширина конечная"
+    },
+    "hhv": {
+        "prefix": "hhv",
+        "body": [
+            "@media (any-hover: hover){\n\t&:hover{\n\t\t$0\n\t}\n}"
+        ],
+        "description": "hhv"
+    },
+}

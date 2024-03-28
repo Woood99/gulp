@@ -21,12 +21,36 @@
 					Header
 				</div>
 			</header>
-			<main class="main"></main>
+			<main class="main">
+				<div class="container">
+					<button class="btn btn-reset btn-primary" data-modal-path="city">
+						<span class="btn-primary__text">Button</span>
+					</button>
+					<input type="text" name="Имя" class="input-reset" placeholder="Имя" />
+					<input type="text" name="Имя" class="input-reset" placeholder="Имя" />
+					<input type="text" name="Имя" class="input-reset" placeholder="Имя" />
+					<input type="text" name="Имя" class="input-reset" placeholder="Имя" />
+					<div style="height: calc(100vh + 150px);">
+						lorem
+					</div>
+				</div>
+			</main>
 			<footer class="footer">
 				<div class="container">
 					Footer
 				</div>
 			</footer>
+		</div>
+
+		<div class="modal-container">
+			<div class="modal city" data-modal-target="city">
+				<div class="modal__container">
+					<button type="button" class="modal__close js-modal-close">
+						close
+					</button>
+					<div class="modal__content"></div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

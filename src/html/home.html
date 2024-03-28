@@ -13,11 +13,27 @@
     <div class="site-container">
         @include('./partials/header.html')
         <main class="main">
-          
+            <div class="container">
+                <button class="btn btn-reset btn-primary" data-modal-path="city">
+                    <span class="btn-primary__text">Button</span>
+                </button>
+                <input type="text" name="Имя" class="input-reset" placeholder="Имя">
+                <input type="text" name="Имя" class="input-reset" placeholder="Имя">
+                <input type="text" name="Имя" class="input-reset" placeholder="Имя">
+                <input type="text" name="Имя" class="input-reset" placeholder="Имя">
+                <div style="height: calc(100vh + 150px);">
+                    lorem
+                </div>
+            </div>
         </main>
         @include('./partials/footer.html')
     </div>
-    <!-- @include('./partials/popups/popup.html') -->
+
+
+    <div class="modal-container">
+        @include('./partials/popups/city.html')
+    </div>
+
 </body>
 
 

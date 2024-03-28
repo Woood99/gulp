@@ -15,7 +15,7 @@
   \******************************/
 /***/ (() => {
 
-eval("document.addEventListener('DOMContentLoaded', () => {\r\n\r\n});\n\n//# sourceURL=webpack://gulp-builder/./src/js/pages/home.js?");
+eval("document.addEventListener('DOMContentLoaded', () => {\r\n});\n\n//# sourceURL=webpack://gulp-builder/./src/js/pages/home.js?");
 
 /***/ })
 

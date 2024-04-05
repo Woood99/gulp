@@ -4,8 +4,8 @@
 <head>
     @include('./partials/head.html', {
         "title": "Страницы",
-        css: 'example',
-        js: 'example'
+        css: '',
+        js: ''
     })
     <style>
         .container{
@@ -125,8 +125,36 @@
                         </label>
                     </div>
                 </div>
+                <div class="block">
+                    <div>
+                        <h4>Tooltip</h4>
+                    </div>
+                    <div class="row">
+                        <button data-tooltip-html="длинный текст с подсказкой">Кнопка 1</button>
+                        <button data-tooltip-html="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facilis voluptas illum minima libero perferendis nobis repellendus nostrum saepe delectus unde vero earum, illo placeat quo officiis accusamus voluptatum! Illum, nulla! Odio officia, natus accusamus est unde quia hic numquam voluptas harum nisi qui velit exercitationem ut optio ea vero impedit quas temporibus maiores. Acc">Кнопка 2</button>
+                        <button data-tooltip-html="длинный текст с подсказкой">Кнопка 3</button>
+                    </div>
+                    <div class="row">
+                        <button data-tooltip-path="tooltip1">Кнопка 1</button>
+                        <button data-tooltip-path="tooltip2">Кнопка 2</button>
+                        <button data-tooltip-path="tooltip3">Кнопка 3</button>
+                    </div>
+                </div>
             </div>
         </main>
+    </div>
+
+
+    <div class="tooltip" data-tooltip-target="tooltip1">
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facilis voluptas illum minima libero perferendis nobis repellendus nostrum saepe delectus unde vero earum, illo placeat quo officiis accusamus voluptatum! Illum, nulla! Odio officia, natus accusamus est unde quia hic numquam voluptas harum nisi qui velit exercitationem ut optio ea vero impedit quas temporibus maiores. Acc
+        </span>
+    </div>
+    <div class="tooltip" data-tooltip-target="tooltip2">
+        tooltip2 lorem
+    </div>
+    <div class="tooltip" data-tooltip-target="tooltip3">
+        tooltip3 lorem
     </div>
 </body>
 

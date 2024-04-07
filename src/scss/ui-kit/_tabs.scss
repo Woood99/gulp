@@ -1,0 +1,17 @@
+.tabs {
+
+    &__nav {
+    }
+
+    &__button {
+        &._active{
+            background-color: red;
+        }
+    }
+
+    &__content {
+    }
+
+    &__panel {
+    }
+}

@@ -1,5 +1,6 @@
 import 'focus-visible';
 import Modal from './functions/modal';
+import WoodTab from './functions/tabs';
 import Tooltip from './functions/tooltip';
 import './functions/fix-fullheight';
 
@@ -26,8 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const tooltip = new Tooltip({
         mode: 'default',
         gap: 10,
-        position: 'bottom',
+        position: 'top',
     });
 
 
+
+    const tabs = document.querySelectorAll('[data-tabs]');
+    tabs.forEach(tab => WoodTab(tab));
 });

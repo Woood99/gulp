@@ -3,15 +3,16 @@
 
 <head>
     @include('./partials/head.html', {
-        "title": "Страницы",
-        css: '',
-        js: ''
+    "title": "Страницы",
+    css: '',
+    js: ''
     })
     <style>
-        .container{
+        .container {
             padding-top: 48px;
             padding-bottom: 48px;
         }
+
         h4:not([class]) {
             font-size: 30px;
             line-height: 1;
@@ -49,7 +50,6 @@
             align-items: flex-start;
             gap: 10px;
         }
-
     </style>
 </head>
 
@@ -83,7 +83,7 @@
                                 </svg>
                             </div>
                             <span class="checkbox__content">
-                               Checkbox
+                                Checkbox
                             </span>
                         </label>
                         <label class="checkbox checkbox--disabled">
@@ -94,7 +94,7 @@
                                 </svg>
                             </div>
                             <span class="checkbox__content">
-                               Checkbox disabled
+                                Checkbox disabled
                             </span>
                         </label>
                         <label class="checkbox checkbox--disabled">
@@ -105,7 +105,7 @@
                                 </svg>
                             </div>
                             <span class="checkbox__content">
-                               Checkbox checked disabled
+                                Checkbox checked disabled
                             </span>
                         </label>
                     </div>
@@ -131,13 +131,44 @@
                     </div>
                     <div class="row">
                         <button data-tooltip-html="длинный текст с подсказкой">Кнопка 1</button>
-                        <button data-tooltip-html="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facilis voluptas illum minima libero perferendis nobis repellendus nostrum saepe delectus unde vero earum, illo placeat quo officiis accusamus voluptatum! Illum, nulla! Odio officia, natus accusamus est unde quia hic numquam voluptas harum nisi qui velit exercitationem ut optio ea vero impedit quas temporibus maiores. Acc">Кнопка 2</button>
+                        <button
+                            data-tooltip-html="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facilis voluptas illum minima libero perferendis nobis repellendus nostrum saepe delectus unde vero earum, illo placeat quo officiis accusamus voluptatum! Illum, nulla! Odio officia, natus accusamus est unde quia hic numquam voluptas harum nisi qui velit exercitationem ut optio ea vero impedit quas temporibus maiores. Acc">Кнопка
+                            2</button>
                         <button data-tooltip-html="длинный текст с подсказкой">Кнопка 3</button>
                     </div>
                     <div class="row">
-                        <button data-tooltip-path="tooltip1">Кнопка 1</button>
-                        <button data-tooltip-path="tooltip2">Кнопка 2</button>
-                        <button data-tooltip-path="tooltip3">Кнопка 3</button>
+                        <button data-tooltip-path="tooltip1a5f">Кнопка 1</button>
+                    </div>
+                </div>
+                <div class="block">
+                    <div>
+                        <h4>tabs</h4>
+                    </div>
+                    <div class="row">
+                        <div class="tabs" data-tabs>
+                            <nav data-tabs-buttons class="tabs__nav list-reset">
+                                <button type="button" class="tabs__button">
+                                    tab 1
+                                </button>
+                                <button type="button" class="tabs__button">
+                                    tab 2
+                                </button>
+                                <button type="button" class="tabs__button">
+                                    tab 3
+                                </button>
+                            </nav>
+                            <div data-tabs-content class="tabs__content">
+                                <div class="tabs__panel" hidden>
+                                    content 1
+                                </div>
+                                <div class="tabs__panel" hidden>
+                                    content 2
+                                </div>
+                                <div class="tabs__panel" hidden>
+                                    content 3
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,16 +176,12 @@
     </div>
 
 
-    <div class="tooltip" data-tooltip-target="tooltip1">
+    <div class="tooltip" data-tooltip-target="tooltip1a5f">
         <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facilis voluptas illum minima libero perferendis nobis repellendus nostrum saepe delectus unde vero earum, illo placeat quo officiis accusamus voluptatum! Illum, nulla! Odio officia, natus accusamus est unde quia hic numquam voluptas harum nisi qui velit exercitationem ut optio ea vero impedit quas temporibus maiores. Acc
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facilis voluptas illum minima libero perferendis nobis repellendus nostrum saepe delectus unde vero
+            earum, illo placeat quo officiis accusamus voluptatum! Illum, nulla! Odio officia, natus accusamus est unde quia hic numquam voluptas harum nisi qui velit
+            exercitationem ut optio ea vero impedit quas temporibus maiores. Acc
         </span>
-    </div>
-    <div class="tooltip" data-tooltip-target="tooltip2">
-        tooltip2 lorem
-    </div>
-    <div class="tooltip" data-tooltip-target="tooltip3">
-        tooltip3 lorem
     </div>
 </body>
 

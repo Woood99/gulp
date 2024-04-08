@@ -246,12 +246,12 @@ export default class Tooltip {
             }
         };
 
-        el.style.left = `${mapCoords.left.bind(this)()}px`;
+        el.style.left = `${mapCoords.left.call(this)}px`;
         if (this.position === 'top') {
-            el.style.top = `${mapCoords.top.bind(this)()}px`;
+            el.style.top = `${mapCoords.top.call(this)}px`;
         }
         if (this.position === 'bottom') {
-            el.style.top = `${mapCoords.bottom.bind(this)()}px`;
+            el.style.top = `${mapCoords.bottom.call(this)}px`;
         }
     }
 
@@ -276,3 +276,22 @@ export default class Tooltip {
         return document.querySelector(`[data-tooltip-target=${pathAttr}]`);
     }
 }
+
+
+// const tooltipHtml = new Tooltip({
+//     mode: 'html',
+//     gap: 10,
+//     targetSelector: '[data-tooltip-html]',
+//     elementSelector: 'tooltip-html',
+//     animation: {
+//         type: 'fade-up',
+//         speed: 300,
+//         transformGap: '10px'
+//     },
+// });
+
+// const tooltip = new Tooltip({
+//     mode: 'default',
+//     gap: 10,
+//     position: 'top',
+// });

@@ -89,3 +89,6 @@ class Tabs {
     }
 
 }
+
+// const tabs = document.querySelectorAll('[data-tabs]');
+// tabs.forEach(tab => WoodTab(tab));

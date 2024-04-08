@@ -36,13 +36,13 @@ export default class Modal {
         });
         window.addEventListener('keydown', function (e) {
             if (e.keyCode == 27 && this.isOpen) {
-              this.close(this.currentModal.name);
+                this.close(this.currentModal.name);
             }
             if (e.which == 9 && this.isOpen) {
-               this.focusCatch(e);
-              return;
+                this.focusCatch(e);
+                return;
             }
-          }.bind(this));
+        }.bind(this));
     }
 
     open(btn, name) {
@@ -57,10 +57,10 @@ export default class Modal {
                 container: function () {
                     if (this.modal) return this.modal.querySelector('.modal__container')
                 },
-               ...this.options[name]
+                ...this.options[name]
             };
             this.modalsOpen[name] = config;
-    
+
             this.openModal(this.modalsOpen[name]);
         }
     }
@@ -107,7 +107,7 @@ export default class Modal {
             modalContainer.classList.remove(modal.animation);
             modal.modal.classList.remove('is-open');
             modalContainer.classList.remove('modal-open');
-            
+
             const modalsOpenLength = Object.keys(this.modalsOpen).length;
 
 
@@ -122,7 +122,7 @@ export default class Modal {
             delete this.modalsOpen[modal.name];
 
             this.updateCurrentModal();
-            
+
             this.focusTrap();
         }
     }
@@ -210,3 +210,7 @@ export default class Modal {
         }
     }
 }
+
+
+// const modalSettings = {};
+// const modal = new Modal(modalSettings);

@@ -1,0 +1,72 @@
+.wd-select {
+    position: relative;
+    width: 100%;
+    &__button {
+        min-height: 40px;
+        width: 100%;
+        border: 1px solid var(--black);
+        padding: 0 16px 0 24px;
+        border-radius: 12px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &__value {
+    }
+    &__check{
+        width: 24px;
+        height: 24px;
+
+        transition: transform $transitionSpeedFast $transitionFunction;
+    }
+    &__dropdown {
+        padding: 12px 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 4px 12px 1px #24262914;
+        border-radius: 12px;
+        z-index: 99;
+        transform: translateY(10px);
+        transition: opacity $transitionSpeed $transitionFunction,
+        visibility $transitionSpeed $transitionFunction,
+        transform $transitionSpeed $transitionFunction;
+    }
+    &__list {
+    }
+
+    &__item {
+        cursor: pointer;
+        padding: 12px 16px;
+        transition: background-color $transitionSpeed $transitionFunction;
+        @media (min-width:$desktop-min){
+             &:hover{
+                background-color: #c5c5c5;
+             } 
+        }
+    }
+
+    &._show{
+        .wd-select__dropdown{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .wd-select__check{
+            transform: rotate(-180deg);
+        }
+    }
+    &._selected{
+        .wd-select__value{
+            color: red;
+        }
+    }
+}

@@ -295,3 +295,10 @@ export default class Tooltip {
 //     gap: 10,
 //     position: 'top',
 // });
+
+/* <button data-tooltip-html="длинный текст с подсказкой">Кнопка 1</button>
+<button data-tooltip-path="tooltip1a5f">Кнопка 1</button>
+
+<div class="tooltip" data-tooltip-target="tooltip1a5f">
+    Lorem i
+</div> */

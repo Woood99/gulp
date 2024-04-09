@@ -92,3 +92,29 @@ class Tabs {
 
 // const tabs = document.querySelectorAll('[data-tabs]');
 // tabs.forEach(tab => WoodTab(tab));
+
+
+/* <div class="tabs" data-tabs>
+<nav data-tabs-buttons class="tabs__nav list-reset">
+    <button type="button" class="tabs__button">
+        tab 1
+    </button>
+    <button type="button" class="tabs__button">
+        tab 2
+    </button>
+    <button type="button" class="tabs__button">
+        tab 3
+    </button>
+</nav>
+<div data-tabs-content class="tabs__content">
+    <div class="tabs__panel" hidden>
+        content 1
+    </div>
+    <div class="tabs__panel" hidden>
+        content 2
+    </div>
+    <div class="tabs__panel" hidden>
+        content 3
+    </div>
+</div>
+</div> */

@@ -10,15 +10,12 @@ class Calendar {
         this.currentMonth = new Date().getMonth() + 1;
         this.table = null;
         this.nav = true;
+        this.maxWidth = null;
         this.html = {
-            prev: `
-            <button type="button">prev</button>
-        `,
-            next: `
-            <button type="button">next</button>
-        `,
+            prev: `<button type="button" class="wd-calendar__nav-btn wd-calendar__prev">prev</button>`,
+            next: `<button type="button" class="wd-calendar__nav-btn wd-calendar__next">next</button>`,
         };
-        this.headerList = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+        this.daysOfWeek = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
         this.monthList = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
         Object.assign(this, options);
@@ -28,6 +25,7 @@ class Calendar {
 
     init() {
         this.container.classList.add("wd-calendar");
+        if (this.maxWidth) this.container.style.maxWidth = this.maxWidth;
         this.createCalendar();
     }
     createToolbar() {
@@ -39,8 +37,8 @@ class Calendar {
         this.container.insertAdjacentHTML('afterbegin', html);
 
         if (this.nav) {
-            this.navPrev = this.container.querySelector(".wd-calendar__nav > :nth-child(1)");
-            this.navNext = this.container.querySelector(".wd-calendar__nav > :nth-child(2)");
+            this.navPrev = this.container.querySelector(".wd-calendar__prev");
+            this.navNext = this.container.querySelector(".wd-calendar__next");
 
             if (this.navPrev) {
                 this.navPrev.addEventListener("click", this.prev.bind(this));
@@ -52,17 +50,19 @@ class Calendar {
     }
 
     createTitle() {
-        return `${this.monthList[this.currentMonth - 1]} ${this.currentYear}`;
+        return `<div class="wd-calendar__title">${this.monthList[this.currentMonth - 1]} ${this.currentYear}</div>`;
     }
 
     createCalendar() {
         this.destroy();
         this.createToolbar();
         const html = `
-        <table class="wd-calendar__table">
-            <tr>
-                ${this.headerList.map(item => `<th><span>${item}</span></th>`).join("")}
-            </tr>
+        <div class="wd-calendar__table">
+            <table class="wd-calendar__header">
+                <tr class="wd-calendar__row">
+                    ${this.daysOfWeek.map(item => `<th class="wd-calendar__cell"><div class="wd-calendar__cell-frame">${item}</div></th>`).join("")}
+                </tr>
+            </table>
             ${this.createBody()}
         </table>
         `;
@@ -107,7 +107,7 @@ class Calendar {
     }
 
     generateMonth(y, m) {
-        let html = '';
+        let html = '<table class="wd-calendar__body">';
 
         let firstDayOfMonth = new Date(y, m, 7).getDay();
         let lastDateOfMonth = new Date(y, m + 1, 0).getDate();
@@ -116,9 +116,9 @@ class Calendar {
         do {
             let dow = new Date(y, m, i).getDay();
             if (dow == 1) {
-                html += '<tr>';
+                html += '<tr class="wd-calendar__row">';
             } else if (i == 1) {
-                html += '<tr>';
+                html += '<tr class="wd-calendar__row">';
                 let k = lastDayOfLastMonth - firstDayOfMonth + 1;
                 for (let j = 0; j < firstDayOfMonth; j++) {
                     html += `
@@ -164,7 +164,7 @@ class Calendar {
             }
             i++;
         } while (i <= lastDateOfMonth);
-
+        html += '</table>'
         return html;
     }
 

@@ -1,0 +1,109 @@
+@import '../$vars.scss';
+
+.wd-calendar {
+    --color-border: #CBE3FF;
+    --max-width: 700px;
+    --height: 400px;
+    --border-radius-table: 12px;
+
+    max-width: var(--max-width);
+    width: 100%;
+
+    &__toolbar {
+        padding-bottom: 12px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        padding: 0 16px;
+    }
+
+    &__table {
+        width: 100%;
+        display: block;
+
+        tbody {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+        border-collapse: collapse;
+    }
+
+    &__body {
+        width: 100%;
+        display: flex;
+        border-collapse: collapse;
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius-table);
+        height: var(--height);
+
+        tbody {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__cell {
+        text-align: left;
+        padding: 0 8px;
+        width: 100%;
+        color: #737476;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+
+        &:not(:first-child) {
+            border-top: 1px solid var(--color-border);
+            ;
+        }
+    }
+
+    &__day {
+        width: 100%;
+        vertical-align: top;
+        padding: 0;
+
+        padding: 8px;
+
+        &:not(:last-child) {
+            border-right: 1px solid var(--color-border);
+            ;
+        }
+
+        &._not-current {
+            color: #d7d5d5;
+        }
+
+        &._today {
+            color: white;
+
+            .wd-calendar__day-frame {
+                background-color: #005bff;
+            }
+        }
+    }
+
+    &__day-frame {
+        display: inline-block;
+        padding: 4px;
+        border-radius: 4px;
+        background-color: transparent;
+        font-size: 13px;
+        line-height: 1;
+    }
+}

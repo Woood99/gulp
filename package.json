@@ -32,8 +32,10 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^4.1.0",
     "gulp-webp": "^4.0.1",
-    "sass": "^1.72.0",
+    "sass": "^1.75.0",
+    "sass-loader": "^14.2.0",
     "style-loader": "^3.3.4",
+    "webpack": "^5.91.0",
     "webpack-stream": "^7.0.0"
   },
   "babel": {

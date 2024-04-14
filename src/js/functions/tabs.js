@@ -1,6 +1,6 @@
-export default function WoodTab(element) {
+export default function WdTab(element) {
     if (!element) return;
-    element.woodTab = new Tabs(element);
+    element.wdTab = new Tabs(element);
 }
 
 class Tabs {
@@ -91,7 +91,7 @@ class Tabs {
 }
 
 // const tabs = document.querySelectorAll('[data-tabs]');
-// tabs.forEach(tab => WoodTab(tab));
+// tabs.forEach(tab => WdTab(tab));
 
 
 /* <div class="tabs" data-tabs>

@@ -7,4 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
         const target = e.target;
     })
+
 });

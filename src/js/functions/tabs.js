@@ -1,3 +1,7 @@
+import {
+    _displayFadeDown
+} from "../modules/slide";
+
 export default function WdTab(element) {
     if (!element) return;
     element.wdTab = new Tabs(element);
@@ -10,6 +14,7 @@ class Tabs {
         this.content = this.container.querySelector('[data-tabs-content]');
         this.buttons = Array.from(this.buttonsList.children);
         this.panels = Array.from(this.content.children);
+        this.animation = this.container.dataset.tabsAnimation || null;
 
         this.activeTab = null;
 
@@ -59,13 +64,17 @@ class Tabs {
         const button = this.buttons.find(button => this.getIndexButton(button) == index);
         const panel = this.panels.find(panel => this.getIndexPanel(panel) == index);
         if (!button || !panel) return;
-
+        if (button.classList.contains('_active')) return;
         this.clearTabs();
 
         this.activeTab = button;
 
         button.classList.add('_active');
-        panel.removeAttribute('hidden');
+        if (this.animation === 'fade') {
+            _displayFadeDown(panel, 500);
+        } else {
+            panel.removeAttribute('hidden');
+        }
     }
 
     clearTabs() {
@@ -95,7 +104,7 @@ class Tabs {
 
 
 /* <div class="tabs" data-tabs>
-<nav data-tabs-buttons class="tabs__nav list-reset">
+<nav data-tabs-buttons class="tabs__nav">
     <button type="button" class="tabs__button">
         tab 1
     </button>

@@ -1,4 +1,4 @@
-function config(mode) {
+function webpackConfig(mode) {
 	return {
 		mode: mode,
 		entry: {
@@ -21,4 +21,4 @@ function config(mode) {
 	}
 }
 
-module.exports = config;
+export default webpackConfig;

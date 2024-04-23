@@ -1,6 +1,7 @@
 import 'focus-visible';
-import './functions/fix-fullheight';
-import './_settings';
+import './functions/fix-fullheight.js';
+import './_settings.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 

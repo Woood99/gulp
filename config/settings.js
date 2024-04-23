@@ -1,4 +1,4 @@
-const notify = require('gulp-notify');
+import gulpNotify from 'gulp-notify';
 
 const settings = {
     fileInclude: {
@@ -7,7 +7,7 @@ const settings = {
     },
     plumberNotify(title) {
         return {
-            errorHandler: notify.onError({
+            errorHandler: gulpNotify.onError({
                 title: title,
                 message: 'Error <%= error.message %>',
                 sound: false,
@@ -16,4 +16,4 @@ const settings = {
     }
 };
 
-module.exports = settings;
+export default settings;
